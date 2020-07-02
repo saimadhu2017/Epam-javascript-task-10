@@ -1,0 +1,77 @@
+<html>
+   <head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="reg.css">
+    <title>register form</title>
+</head>
+<body>
+<div class="bg-img">
+
+<form name="register" align="left" class="container" >
+<h3>REGISTRATION FORM</h3>
+
+<label><b>RegId*</b></label>
+<input type="number" name="id" id="id" placeholder="Enter your registration number" required="true"/>
+<label><b>Name*</b></label>
+<input type="text" name="uname" id="uname" placeholder="Enter your full name" required="true"/>
+<label><b>CollegeName*</b></label>
+<input type="text" name="clg" id="clg" placeholder="Enter your College name" required="true"/>
+<label><b>Branch*</b></label>
+<select name="branch">
+<option><b>Select Any Department</b></option>
+<option>CSE</option>
+<option>ECE</option>
+<option>EEE</option>
+<option>MECH</option>
+<option>CIVIL</option>
+<option>ECSE</option>
+<option>BT</option>
+<option>OTHERS</option>
+</select>
+<br><br>
+<label><b>Year of study*</b></label>
+
+<select name="year">
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+</select>
+<br><br>
+<label><b>Gender*</b></label>
+<input type="radio" name="gender" id="gender" 
+value="Male">Male</input>
+<input type="radio" name="gender" id="gender" 
+value="Female">Female</input>
+<br><br>
+<label><b>Mobile*</b></label>
+<input type="number" name="mobile" id="mobile" placeholder="Enter your mobile number" required="true"/>
+<label><b>Email*</b></label>
+<input type="email" name="email" id="email" placeholder="Enter your Email Address" required="true"/>
+
+<input type="submit" name="submit"
+value="Register" onclick="validateform()"/>
+<input type="reset" name="reset"
+value="Reset"/>
+</div>
+</form>
+
+<script>
+function validateform(){
+var id= document.getElementById("id").value;
+if(id.length != 5){
+window.alert("Registration Id must be a 5 digit number");}
+var uname= document.getElementById("uname").value;
+if(uname == ""){
+window.alert("User name is mandatory");}
+var clg= document.getElementById("clg").value;
+if(clg == ""){
+window.alert("College name cannot be empty");}
+var mob= document.getElementById("mobile").value;
+if(mob.length!=10){
+window.alert("Invalid Mobile Number");}
+}
+</script>
+
+</body>
+</html>
